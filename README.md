@@ -33,7 +33,7 @@ Sonuç olarak, bu proje kapsamında **kazanan algoritma SVM** olmuştur.
 
 ## Sonuç
 - **SVM:** Daha iyi genelleme, yüksek doğruluk, test setinde %95.2 başarı.  
-- **RF:** Eğitimde güçlü (%99.1) fakat doğrulama ve testte overfit eğilimi (%91 civarı).  
+- **RF:** Eğitim verilerinde (%99.1) ile overfit eğilimi göstermiştir. Testte overfit olasılığı güçlenmiiştir.  
 - **Ön işleme adımları (Gaussian Blur, HOG, LBP, PCA, SMOTE)** model başarısını artıran kritik bileşenlerdir.  
 
 Bu nedenle, proje ve veri seti özelinde **SVM tercih edilmiştir**.
