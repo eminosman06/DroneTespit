@@ -13,6 +13,7 @@ Sonuç olarak, bu proje kapsamında **kazanan algoritma SVM** olmuştur.
 - **Toplam görüntü:** 7022  
 - Görüntü boyutları: (150, 150)  
 - Sınıf dağılımı: [3010, 4012]  
+- Dataset Releases kısmındadır. Pozitif ve Negatif verileri çekip istediğiniz klasöre koyarak çalışabilirsiniz.
 
 ## Ön İşleme ve Öznitelik Çıkarımı
 - **Gaussian Blur:** Gürültü azaltma ve daha temiz kenar bilgisi elde etme.  
