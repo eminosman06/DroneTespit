@@ -1,6 +1,6 @@
 # DroneTespit 🚁
 
-Bu proje, görüntü tabanlı **örüntü tanıma** teknikleriyle dronların tespit edilmesini amaçlamaktadır. Çalışmada farklı görüntü işleme yöntemleri ve makine öğrenmesi algoritmaları bir araya getirilmiştir.  
+Bu proje, Ocak 2025 tarihli Örüntü Tanıma dersi projesidir. Görüntü tabanlı **örüntü tanıma** teknikleriyle dronların tespit edilmesini amaçlamaktadır. Çalışmada farklı görüntü işleme yöntemleri ve makine öğrenmesi algoritmaları bir araya getirilmiştir.  
 
 ## Özet
 Projede özellikle **Destek Vektör Makineleri (SVM)** ve **Random Forest (RF)** algoritmaları kıyaslanmıştır. Kullanılan veri seti ve problem özelinde **SVM daha yüksek doğruluk ve genelleme başarısı göstermiştir**. RF algoritması ise güçlü bir ensemble yöntem olmasına rağmen, eğitim sürecinde **overfitting (aşırı öğrenme) riski** taşımış ve test verisinde daha düşük performans sergilemiştir.  
@@ -34,7 +34,7 @@ Sonuç olarak, bu proje kapsamında **kazanan algoritma SVM** olmuştur.
 
 ## Sonuç
 - **SVM:** Daha iyi genelleme, yüksek doğruluk, test setinde %95.2 başarı.  
-- **RF:** Eğitim verilerinde (%99.1) ile overfit eğilimi göstermiştir. Testte overfit olasılığı güçlenmiiştir.  
+- **RF:** Eğitim verilerinde (%99.1) ile overfit eğilimi göstermiştir. Testte overfit olasılığı güçlenmiştir.  
 - **Ön işleme adımları (Gaussian Blur, HOG, LBP, PCA, SMOTE)** model başarısını artıran kritik bileşenlerdir.  
 
 Bu nedenle, proje ve veri seti özelinde **SVM tercih edilmiştir**.
