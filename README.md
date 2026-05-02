@@ -1,40 +1,40 @@
-# DroneTespit 🚁
+# Drone Detection 🚁
 
-Bu proje, Ocak 2025 tarihli Örüntü Tanıma dersi projesidir. Görüntü tabanlı **örüntü tanıma** teknikleriyle dronların tespit edilmesini amaçlamaktadır. Çalışmada farklı görüntü işleme yöntemleri ve makine öğrenmesi algoritmaları bir araya getirilmiştir.  
+This project is a Pattern Recognition course project from January 2025. It aims to detect drones using image-based pattern recognition techniques. In this study, various image processing methods and machine learning algorithms are combined.
 
-## Özet
-Projede özellikle **Destek Vektör Makineleri (SVM)** ve **Random Forest (RF)** algoritmaları kıyaslanmıştır. Kullanılan veri seti ve problem özelinde **SVM daha yüksek doğruluk ve genelleme başarısı göstermiştir**. RF algoritması ise güçlü bir ensemble yöntem olmasına rağmen, eğitim sürecinde **overfitting (aşırı öğrenme) riski** taşımış ve test verisinde daha düşük performans sergilemiştir.  
+## Summary
+In the project, Support Vector Machines (SVM) and Random Forest (RF) algorithms were specifically compared. For the given dataset and problem, SVM demonstrated higher accuracy and better generalization performance. Although RF is a strong ensemble method, it showed a risk of overfitting during training and achieved lower performance on the test data.
 
-Sonuç olarak, bu proje kapsamında **kazanan algoritma SVM** olmuştur.  
+As a result, the winning algorithm in this project is SVM.
 
-## Veri Seti
-- **Pozitif görüntü sayısı:** 4012  
-- **Negatif görüntü sayısı:** 3010  
-- **Toplam görüntü:** 7022  
-- Görüntü boyutları: (150, 150)  
-- Sınıf dağılımı: [3010, 4012]  
-- Dataset Releases kısmındadır. Pozitif ve Negatif verileri çekip istediğiniz klasöre koyarak çalışabilirsiniz.
+## Data Set
+- **Number of positive images:** 4012  
+- **Number of negative images:** 3010  
+- **Total images:** 7022  
+- Image size: (150, 150)  
+- Class distribution: [3010, 4012]  
+- The dataset is available in the Releases section. You can download the positive and negative data and place them in any directory to run the project.
 
-## Ön İşleme ve Öznitelik Çıkarımı
-- **Gaussian Blur:** Gürültü azaltma ve daha temiz kenar bilgisi elde etme.  
-- **HOG (Histogram of Oriented Gradients):** Kenar ve şekil bilgisi çıkarımı.  
-  - İlk öznitelik boyutu: 1764  
-  - PCA sonrası boyut: 500 (korunan varyans: %94.54)  
-- **LBP (Local Binary Patterns):** Doku bilgisi çıkarımı.  
-  - Öznitelik boyutu: 18  
-- **HOG + LBP birleştirme:** Toplam öznitelik boyutu: 518  
-- **SMOTE:** Sınıf dengesizliğini gidermek için azınlık sınıfına sentetik örnekler eklenmiştir.  
+## Preprocessing and Feature Extraction
+- **Gaussian Blur:** Noise reduction and obtaining cleaner edge information.
+- **HOG (Histogram of Oriented Gradients):** Extraction of edge and shape features.
+  - Initial feature size: 1764  
+  - After PCA: 500 (variance retained: 94.54%)
+- **LBP (Local Binary Patterns):** Extraction of texture features.
+  - Feature size: 18  
+- **HOG + LBP birleştirme:** Total feature size: 518  
+- **SMOTE:** Synthetic samples were added to the minority class to address class imbalance.
 
-## Eğitim / Doğrulama / Test Sonuçları
+## Training / Validation / Test Results
 
 |              Model              | Train Accuracy | Validation Accuracy | Test Accuracy |
 |---------------------------------|----------------|---------------------|---------------|
 | **SVM (rbf)**                   | 0.987          | 0.946               | **0.952**     |
-| **RF (100 ağaç, max_depth=10)** | 0.991          | 0.918               | 0.909         |
+| **RF (100 tree, max_depth=10)** | 0.991          | 0.918               | 0.909         |
 
-## Sonuç
-- **SVM:** Daha iyi genelleme, yüksek doğruluk, test setinde %95.2 başarı.  
-- **RF:** Eğitim verilerinde (%99.1) ile overfit eğilimi göstermiştir. Testte overfit olasılığı güçlenmiştir.  
-- **Ön işleme adımları (Gaussian Blur, HOG, LBP, PCA, SMOTE)** model başarısını artıran kritik bileşenlerdir.  
+## Result
+- **SVM:** Better generalization, higher accuracy, 95.2% performance on the test set. 
+- **RF:** Showed an overfitting tendency with 99.1% on training data. Overfitting likelihood increased on the test set.
+- **Preprocessing steps (Gaussian Blur, HOG, LBP, PCA, SMOTE)** are critical components that improved model performance.
 
-Bu nedenle, proje ve veri seti özelinde **SVM tercih edilmiştir**.
+Therefore, for this project and dataset, **SVM was selected as the preferred algorithm**.
